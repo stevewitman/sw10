@@ -4,10 +4,10 @@
   </mat-card-header>
   <mat-card-content>
     <mat-list>
-      <mat-list-item>
-        <h4 matLine>title</h4>
-        <span matLine>details</span>
-        <button mat-icon-button color="warn">
+      <mat-list-item *ngFor="let project of projects" (click)="selected.emit(project)">
+        <h4 matLine>{{project.title}}</h4>
+        <span matLine>{{project.details}}</span>
+        <button mat-icon-button (click)="deleted.emit(project); $event.stopImmediatePropagation();" color="warn">
           <mat-icon>clear</mat-icon>
         </button>
       </mat-list-item>

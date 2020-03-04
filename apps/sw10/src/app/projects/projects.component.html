@@ -1,10 +1,19 @@
 <div class="container d-flex mt-3">
   <div class="row">
     <div class="col-5">
-      <bb-projects-list></bb-projects-list>
+      <bb-projects-list
+        [projects]="projects$ | async"
+        (selected)="select($event)"
+        (deleted)="delete($event)"
+      ></bb-projects-list>
     </div>
     <div class="col-7">
-      <bb-project-details></bb-project-details>
+      <bb-project-details
+        [formGroup]="form"
+        [project]="project"
+        (saved)="save($event)"
+        (cancelled)="reset()"
+      ></bb-project-details>
     </div>
   </div>
 </div>
