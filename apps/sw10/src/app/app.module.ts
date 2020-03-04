@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectDetailsComponent } from './projects/project-details/project-deta
     MaterialModule,
     CoreDataModule,
     UiToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
