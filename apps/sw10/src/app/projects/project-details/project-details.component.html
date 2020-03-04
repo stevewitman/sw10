@@ -1,1 +1,27 @@
-<p>project-details works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create New Project </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="mb-0">
+    <form>
+      <mat-form-field class="w-100">
+        <mat-label>Title</mat-label>
+        <input type="text" matInput placeholder="Title" name="title">
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <mat-label>Details</mat-label>
+        <input type="text" matInput placeholder="Details" name="details">
+
+      </mat-form-field>
+      <span>Importance Level</span>
+      <mat-slider [thumbLabel]="true" class="w-100" name="importanceLevel"></mat-slider>
+
+      <mat-card-actions class="d-flex flex-row-reverse mb-0">
+        <button type="submit" mat-button color="primary">Submit</button>
+        <button type="reset" mat-button color="warn">Clear</button>
+      </mat-card-actions>
+
+    </form>
+  </mat-card-content>
+</mat-card>
