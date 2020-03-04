@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap-4-grid'; // https://getbootstrap.com/docs/4.4/layout/grid/
+@import '~bootstrap-utilities'; // https://getbootstrap.com/docs/4.4/utilities/
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
